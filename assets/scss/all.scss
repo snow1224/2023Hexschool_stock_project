@@ -1,4 +1,5 @@
 @import './layout/reset';
+@import "../../node_modules/bootstrap/scss/functions";
 @import './layout/variables';
 
 @import './layout/header.scss';
@@ -6,3 +7,5 @@
 
 
 @import './pages/index.scss';
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons";
