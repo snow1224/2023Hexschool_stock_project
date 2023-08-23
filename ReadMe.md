@@ -8,6 +8,9 @@
 ## 專案開發前置作業
 * 安裝npm(雪朱依照GGV任務安裝node16)
     * npm install
+* 安裝bootstrap5、bootstrap-icons
+    * npm install bootstrap
+    * npm i bootstrap-icons
 * 建置網頁
     * npm dev
 
