@@ -1,4 +1,25 @@
-.header{
-  background: #FFFFFF;
-  font-size: 64px;
+.btn{
+  &:hover{
+    background-color: $white;
+    color: $primary;
+    border-color: $primary;
+  }
+}
+
+a{
+  text-decoration: none;
+  &:hover{
+    color: $black;
+  }
+}
+
+.nav-link{
+  &:hover{
+    color: $black;
+  }
+}
+
+img{
+  // display: block;
+  vertical-align: middle;
 }

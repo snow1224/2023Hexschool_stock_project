@@ -1,11 +1,11 @@
+@import './layout/variables';
 @import './layout/reset';
 @import "../../node_modules/bootstrap/scss/functions";
-@import './layout/variables';
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons";
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
 
 @import './pages/index.scss';
-@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/bootstrap-icons/font/bootstrap-icons";
