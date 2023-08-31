@@ -1,0 +1,52 @@
+// .mwt_border{
+// 	width:250px;
+// 	height:30px;
+// 	text-align:center;
+// 	background:#fff;
+// 	position:relative;
+// 	border: solid 1px #333;
+// 	margin:30px;
+// 	padding:30px;
+// }
+
+/*箭頭右*/
+.mwt_border .arrow_r_int{
+	width:0px;
+	height:0px;
+	border-width:10px;
+	border-style:solid;
+	border-color:transparent transparent transparent #333;
+	position:absolute;
+	top:50%;
+	right:-20px;
+}
+/*箭頭右-邊框*/
+.mwt_border .arrow_r_out{
+	width:0px;
+	height:0px;
+	border-width:10px;
+	border-style:solid;
+	border-color:transparent transparent transparent #fff;
+	position:absolute;
+	top:50%;
+	right:-19px;
+}
+
+.conversation{
+	position: relative;
+}
+
+.conversation a::before{
+	content: "還沒有註冊嗎？\A 點我註冊喵";
+	white-space: pre;
+	display: block;
+	position: absolute;
+	top:20%;
+	left: -60px;
+	height: 80px;
+	color: #FFFFFF;
+	background: #947155;
+	border-radius: 10%;
+	border:3px solid #333;
+	padding: 8px 16px 8px 16px;
+}
