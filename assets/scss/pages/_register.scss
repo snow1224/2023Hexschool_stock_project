@@ -1,15 +1,15 @@
 //對話框
-.conversation{
+.welcome{
 	position: relative;
 }
-.conversation a::before{
-	content: "還沒有註冊嗎？\A 點我註冊喵";
+.welcome a::before{
+	content: "歡迎光臨財金喵！";
 	white-space: pre;
 	display: block;
 	position: absolute;
-	top:20%;
-	left: -60px;
-	height: 80px;
+	top:25%;
+	left: -70px;
+	height: 50px;
 	color: #FFFFFF;
 	background: #947155;
 	border-radius: 10%;

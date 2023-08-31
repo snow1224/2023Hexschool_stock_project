@@ -4,13 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>財經貓</title>
+    <%- include('./layout/google_icon_cdn') -%>
+    <title>註冊</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是註冊頁</h1>
-
+    <div class="bg-dark-gray">
+      <div class="container pt-md-5 pb-md-5 pt-3 pb-3">
+        <div class="d-flex justify-content-around align-items-center">
+          <div class="login w-300">
+            <form action="">
+              <!-- 會員名稱 -->
+              <div class="d-flex mb-3">
+                <label for="username">
+                  <span class="me-1 text-primary material-icons-round wh-36 fs-3 d-flex align-items-center">
+                    person
+                  </span>
+                </label>
+                <input class="w-100 ps-2 fz-16 bg-dark-gray border border-primary broder-3" type="email" id="username" placeholder="請輸入您的暱稱" required>
+              </div>
+    
+              <!-- Email -->
+              <div class="d-flex mb-5">
+                <label for="useremail">
+                  <span class="me-1 text-primary material-icons-round wh-36 fs-3 d-flex align-items-center">
+                    email
+                  </span>
+                </label>
+                <input class="w-100 ps-2 fz-16 bg-dark-gray border border-primary broder-3" type="email" id="useremail" placeholder="請輸入電子郵件" required>
+              </div>
+              
+              <!-- 設定密碼 -->
+              <div class="d-flex mb-3">
+                <label for="userpasword">
+                  <span class="material-icons-round me-1 text-primary wh-36 fs-3 d-flex align-items-center">
+                    key
+                    </span>
+                </label>
+                <input class="w-100 ps-2 fz-16 bg-dark-gray border border-primary broder-3" type="password" id="userpassword" placeholder="請輸入密碼" required> 
+              </div>
+              
+              <!-- 重新輸入密碼 -->
+              <div class="d-flex mb-5">
+                <label for="userpassword_again">
+                  <span class="material-icons-round me-1 text-primary wh-36 fs-3 d-flex align-items-center">
+                    lock
+                    </span>
+                </label>
+                <input class="w-100 ps-2 fz-16 bg-dark-gray border border-primary broder-3" type="password" id="userpassword_again" placeholder="重新輸入密碼" required> 
+              </div>
+    
+              <button type="submit" class="btn btn-primary d-block w-100">
+                註冊
+                <img class="h-36" src="../assets/images/paw.png" alt="貓掌印">
+              </button>
+             
+            </form>
+          </div>
+          <div class="welcome text-center">
+            <a class="d-block w-100 hover-opacity-7" href="register.html">
+              <img class="wh-480" src="../assets/images/Desktop_kv.png" alt="正在敲鍵盤的貓貓圖片">
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
