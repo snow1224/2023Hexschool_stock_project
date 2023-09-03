@@ -1,4 +1,21 @@
+*,*:before,*{
+    &:after{
+        box-sizing: border-box;
+    }
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
 img{
     // display: block;
     vertical-align: middle;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+      color: $brown;
+    }
 }

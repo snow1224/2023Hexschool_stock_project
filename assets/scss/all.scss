@@ -1,8 +1,10 @@
 @import './layout/variables';
-@import './layout/utility';
 @import './layout/reset';
+@import "./layout/base"; // 全站樣式 img{}, body{}
+@import './layout/utility';
 @import "./layout/mixin"; // mixin
 
+// bootstrap
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons";

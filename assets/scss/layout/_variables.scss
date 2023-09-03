@@ -6,12 +6,13 @@ $secondary:     #F6CB97;
 $accent-blue:   #F7E5C1;
 $accent-pink:   #FDF5EE;
 $white:         White;
-$black:         #3D2622;
-$black-50:      rgb(61, 38, 34, 0.5);
-$black-30:      rgb(61, 38, 34, 0.3);
-$black-10:      rgb(61, 38, 34, 0.1);
-$bg-dark-gray:  #EEE9E4;
-$bg-gray:       #F6F3EE;
+$brown:         #3D2622;
+$brown-50:      rgba(61, 38, 34, 0.5);
+$brown-30:      rgba(61, 38, 34, 0.3);
+$brown-10:      rgba(61, 38, 34, 0.1);
+$light-orange:  #EEE9E4;
+$light-brown:       #F6F3EE;
+
 
 // 文字大小設定
 $font-size-base: 1rem; // 16px
@@ -25,3 +26,6 @@ $h4-font-size: $font-size-base * 1.5; // 24px
 $h5-font-size: $font-size-base * 1.25; // 20px
 $h6-font-size: $font-size-base; // 16px
 
+// https://hackmd.io/@south2/Sk0A51522#%E7%A7%BB%E9%99%A4-a-%E9%80%A3%E7%B5%90%E5%BA%95%E7%B7%9A
+// $link-decoration: underline !default;
+$link-decoration: none !default; // *custom
