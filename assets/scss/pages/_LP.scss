@@ -178,3 +178,28 @@ ul{
     width: 75%;
     height: auto;
 }
+
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #947155;
+    border-color: #947155;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+
+    &:hover{
+        color: #947155;
+
+    }
+}
+
+.nav-tabs {
+    --bs-nav-tabs-border-width: 1px;
+    border-bottom: 5px solid #947155;
+}
+
+.imgSize{
+    width: 20px;
+    height: 20px;
+}
