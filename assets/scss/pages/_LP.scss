@@ -1,2 +1,118 @@
+.btn-link {
+    .addIcon {
+        display: block; // 展開的 icon 預設顯示
+    }
+    .removeIcon {
+        display: none; // 收合的 icon 預設不顯示
+    }
+    &:not(.collapsed) {
+      .addIcon {
+      display: none;
+    }
+    .removeIcon {
+      display: block;
+    }
+  }
+}
+.border_bottom{
+    border-bottom: 1px solid #947155;
+
+}
+.pr_color{
+    color: #947155;
+}
+
+input, textarea{
+    --bs-focus-ring-color: #947155;
+    border-color: #947155;
+}
+
+
+
+.pr_button{
+    width: auto;
+    color: #ffffff;
+    background-color: #947155;
+    border-radius: 5px;
+    border: 0px;
+    background-origin: padding-box;
+    padding: 8px 16px 8px 16px;
+}
+.pr_drowdown{
+    width: auto;
+    border-radius: 5px;
+    border: 1px solid #947155;
+    background-origin: padding-box;
+    padding: 8px 16px 8px 16px;
+    color: #947155;
+}
+
+.pr_textbox{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #947155;
+    background-origin: padding-box;
+    padding: 8px 8px 8px 8px;
+    color: #947155;
+}
+
+ul{
+    padding-left: 1px;
+}
+
+.labelSidebar {
+    width: 20px;
+    height: 80px;
+    background-color: #d1d1d1;
+    color: #686666;
+    position: absolute; // 絕對定位在 sideMenu 上
+    right: -20px;
+    top: 0; //絕對定位垂直置中的技巧
+    bottom: 0; //絕對定位垂直置中的技巧
+    margin: auto;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
+  }
+  #sideMenu-active:checked + .sideMenu {
+    .addIcon {
+        display: block; // 展開的 icon 預設顯示
+    }
+    .removeIcon {
+        display: none; // 收合的 icon 預設不顯示
+    }
+    &:not(.collapsed) {
+      .addIcon {
+      display: none;
+    }
+    .removeIcon {
+      display: block;
+    }
+  }
+    transform: translateX(0);
+    label .fas {
+      transform: scaleX(-0.5);
+    }
+  }
+
+  #sideMenu-active {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .sideMenu {
+    width: auto;
+    background-color: #94715548;
+    border-right: 3px solid #d1d1d1;
+    display: flex;
+    flex-direction: column; //主軸
+    padding: 50px 0;
+    box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
+    position: relative;
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
 
 
