@@ -1,7 +1,7 @@
 <div class="d-flex flex-row ps-3">
-        <div class="col-3">
+        <div class="col-md-3 upper">
             <input type="checkbox" name="" id="sideMenu-active" />
-          <div class="row sideMenu">
+          <div class="row sideMenu me-md-2 me-10">
                 <!-- 標題 -->
                 <h1 class="letter-spaing-1em fw-bold Noto-Sans-CJK-TC fs-3 pr_color">股票分類</h1>
                 
@@ -106,8 +106,8 @@
                     <div class="mb-md-4">
                         <ul>
                             <li class="m-2">
-                                <button alt="search" class="pr_button text-nowrap">
-                                    查詢分類
+                                <button alt="search" class="pr_button">
+                                    <div class="fit">查詢分類</div>
                                 </button>
                             </li>
                             
@@ -123,45 +123,152 @@
         </div>
 
       <!-- 主要呈現部分 -->
-    <div class="col-9">
-        <div class="d-flex justify-content-md-around">
-            <select class="col-1 pr_drowdown me-2" name="search" id="search">
-                <option value="股票名稱">股票名稱</option>
-                        <option value="股票代碼">股票代碼</option>
-                        <option value="成交量">成交量</option>
-                        <option value="股價">股價</option>
-                        <option value="漲幅">漲幅</option>
-            </select>
-            <label class="col-9 me-2">
-                <input type="textbox" class="pr_textbox" name="" vaule="">
-            </label>
-            <label class="col-1">
-                <button class="pr_button text-nowrap me-2" style="cursor: pointer;">
-                    <span> 查詢</span>
-                </button>
-            </label>
-            <div>
+    <div class="container col-md-9 lower">
+        <div class="d-flex flex-row justify-content-around">
+
+
+            <!-- 浮動標籤 -->
+            <div class="form-floating mb-3">
+                <select class=" pr_drowdown me-2" id="floatingSelect" aria-label="Floating label select example">
+                            <option value="股票名稱">股票名稱</option>
+                            <option value="股票代碼">股票代碼</option>
+                            <option value="成交量">成交量</option>
+                            <option value="股價">股價</option>
+                            <option value="漲幅">漲幅</option>
+                  </select>
+                  
+              </div>
+
+              
+                <div class="form-floating mb-3 me-2 width100">
+                    <input type="text" class="form-control pr_textbox " placeholder="查詢條件" id="floatingInput">
+                </div>
+            
+              <div class="form-floating mb-3">
+                    <div class="d-flex ">
+                        <button class="font-bold pr_button text-nowrap" type="button">
+                                查詢
+                        </button>
+                    </div>
+              </div>                  
             </div>
+
+            <div class="text-center pr_backgroundColor border_top  ">
+                <h3 class="fw-bold pr_color">
+                    台股大盤走勢
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <div class="d-flex justify-content-center">
+                    <img src="../assets/images/Picture.webp" class="reSize">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between pr_backgroundColor mt-5 align-items-center">
+
+                    <div class="col text-center">共35筆</div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <ul class="d-flex pt-3">
+                            <li class="me-1 text-center"><a href="#">«</a></li>
+                            <li class="me-1 text-center"><a href="#">1</a></li>
+                            <li class="me-1 text-center"><a class="active" href="#">2</a></li>
+                            <li class="me-1 text-center"><a href="#">3</a></li>
+                            <li class="me-1 text-center"><a href="#">4</a></li>
+                            <li class="me-1 text-center"><a href="#">5</a></li>
+                            <li class="me-1 text-center"><a href="#">6</a></li>
+                            <li class="me-1 text-center"><a href="#">7</a></li>
+                            <li class="me-1 text-center"><a href="#">»</a></li>
+                          </ul>
+                        </div>
+
+                    <div class="col text-center">顯示
+                        <select class=" pr_drowdown me-2" id="floatingSelect" aria-label="Floating label select example">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                        </select>筆
+                    </div>
+
+            </div>
+            <table class="table mt-2 me-2 mb-2">
+                <thead class="mt-5">
+                    <tr>
+                        <th scope="col">選取</th>
+                        <th scope="col">股票名稱/代碼</th>
+                        <th scope="col">股票成交量(張)</th>
+                        <th scope="col">股價</th>
+                        <th scope="col">漲幅</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                  <tr class="table-danger">
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>A股/0050</td>
+                    <td>200,000</td>
+                    <td>100.50</td>
+                    <td><span>9.45</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>B股/0760</td>
+                    <td>10,000</td>
+                    <td>37.50</td>
+                    <td>2.20</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>C股/2100</td>
+                    <td>1,000</td>
+                    <td>1.50</td>
+                    <td>1.45</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>D股/1150</td>
+                    <td>9,000</td>
+                    <td>10.50</td>
+                    <td>2.45</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>E股/3022</td>
+                    <td>500,000</td>
+                    <td>378.50</td>
+                    <td>10.05</td>
+                  </tr>
+                  <tr>
+                  
+                </tbody>
+              </table>
+            
+                <button class="font-bold pr_button text-nowrap me-1 mt-2 ms-2 mb-5" type="button">
+                    追蹤
+                </button>
+                <button class="font-bold pr_button text-nowrap me-1 mt-2 ms-2 mb-5" type="button">
+                    匯出excle
+                </button>
         </div>
+        
     </div>
  
-</div>
-<script>
-(function(){
-    /*  Is not working at CodePen
-    $.get('https://od.lk/s/MzBfMzk2OTE3OV8/icon.svg',function(data) {
-        $('#svg').append(data);
-    },'text');
-    */
-  
-    $('.openL').click(function () {
-        
-        $('.left-menu').toggleClass('active');
-        
-    });
-   
-})();
 
-</script>
+
+    <div class="m-5 p-1">
+             
+    </div>
+</div>
+
    
  

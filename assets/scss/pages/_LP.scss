@@ -16,10 +16,16 @@
 }
 .border_bottom{
     border-bottom: 1px solid #947155;
+}
 
+.border_top{
+    border-top: 1px solid #947155;
 }
 .pr_color{
     color: #947155;
+}
+.pr_backgroundColor{
+    background-color: #f0dac8;
 }
 
 input, textarea{
@@ -37,7 +43,26 @@ input, textarea{
     border: 0px;
     background-origin: padding-box;
     padding: 8px 16px 8px 16px;
+    .fit{
+        @media (min-width: 768px) {
+            padding: 8px 16px 8px 16px;
+        }
+        padding: 0px;
+    }
+    
 }
+
+.table-danger {
+    --bs-table-color: red;
+    
+    border-color: #947155;
+}
+.table-success {
+    --bs-table-color: green;
+    
+    border-color: #947155;
+}
+
 .pr_drowdown{
     width: auto;
     border-radius: 5px;
@@ -61,6 +86,9 @@ ul{
 }
 
 .labelSidebar {
+    @media (min-width: 768px) {
+    display: none;
+    }
     width: 20px;
     height: 80px;
     background-color: #d1d1d1;
@@ -76,23 +104,10 @@ ul{
     box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
   }
   #sideMenu-active:checked + .sideMenu {
-    .addIcon {
-        display: block; // 展開的 icon 預設顯示
-    }
-    .removeIcon {
-        display: none; // 收合的 icon 預設不顯示
-    }
-    &:not(.collapsed) {
-      .addIcon {
-      display: none;
-    }
-    .removeIcon {
-      display: block;
-    }
-  }
     transform: translateX(0);
+    // 當我點擊 sideMenu 時，checkbox 會啟動 id，讓側邊選單跑出來
     label .fas {
-      transform: scaleX(-0.5);
+        transform: scaleX(-0.5);
     }
   }
 
@@ -104,15 +119,62 @@ ul{
 
   .sideMenu {
     width: auto;
-    background-color: #94715548;
-    border-right: 3px solid #d1d1d1;
+    height: 100%;
+    background-color: #ffffff;
+    border-right: 3px solid #d1d1d194;
     display: flex;
     flex-direction: column; //主軸
     padding: 50px 0;
     box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
     position: relative;
+    @media (min-width: 768px) {
+        transform: translateX(0);
+        box-shadow: 0px 0 0px rgba(23, 23, 54, 0.6);
+    }
     transform: translateX(-100%);
     transition: 0.5s;
   }
 
+.upper{
+    z-index: 3;
+    position: relative;
+}
+.lower{
+    @media (min-width: 768px) {
+        position: relative;
+    }
+    z-index: 2;
+    position: absolute;
+}
 
+.form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select {
+     height: 10px; 
+    min-height: 10px; 
+    line-height: 1.25;
+    box-sizing: border-box;
+}
+.form-floating > .form-control, .form-floating > .form-control-plaintext {
+    padding: 1.2rem 0.75rem;
+}
+.width100{
+    width: 100%;
+}
+.form-floating > label {
+    padding: 5px ;
+    
+}
+.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .form-control-plaintext:focus, .form-floating > .form-control-plaintext:not(:placeholder-shown) {
+    padding: 1.2rem 0.75rem;
+}
+.reSize{
+    @media (min-width: 992px) {
+        width: auto;
+        height: auto;
+    }
+    @media (min-width: 768px) {
+        width: 80%;
+        height: auto;
+    }
+    width: 75%;
+    height: auto;
+}
