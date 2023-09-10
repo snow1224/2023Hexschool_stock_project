@@ -12,6 +12,7 @@ $brown-30:      rgba(61, 38, 34, 0.3);
 $brown-10:      rgba(61, 38, 34, 0.1);
 $light-orange:  #EEE9E4;
 $light-brown:       #F6F3EE;
+$dark-brown: #EEE9E4;
 
 
 // 文字大小設定
@@ -29,3 +30,13 @@ $h6-font-size: $font-size-base; // 16px
 // https://hackmd.io/@south2/Sk0A51522#%E7%A7%BB%E9%99%A4-a-%E9%80%A3%E7%B5%90%E5%BA%95%E7%B7%9A
 // $link-decoration: underline !default;
 $link-decoration: none !default; // *custom
+
+// 變更陰影
+$box-shadow-sm: 0 .5rem 0.5rem rgba(#F6CB97, .75);
+$box-shadow-inset: inset 0 1px 2px rgba(#F6CB97, .75);
+
+// 變更分頁
+$pagination-border-radius: 8px;
+$pagination-margin-start: 12px;  // 分頁間距
+$pagination-hover-color: $white;
+$pagination-hover-bg: $primary;
