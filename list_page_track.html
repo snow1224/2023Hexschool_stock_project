@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">    <title>登入</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">    <title>財經貓</title>
     <script type="module" crossorigin src="/2023Hexschool_stock_project/assets/main-4f304b7d.js"></script>
     <link rel="stylesheet" href="/2023Hexschool_stock_project/assets/main-ca41ae44.css">
   </head>
@@ -39,48 +42,176 @@
 </nav>
 
 
-    <div class="bg-light-orange">
-      <div class="container pt-md-5 pb-md-5 pt-3 pb-3 ">
-          <div class="d-flex justify-content-around align-items-center">
-            <div class="login w-300">
-              <form action="">
-                <div class="d-flex mb-3">
-                  <label for="useremail">
-                    <span class="me-1 text-primary material-icons-round wh-36 fs-3 d-flex align-items-center">
-                      email
-                    </span>
-                  </label>
-                  <input class="w-100 ps-2 fz-16 bg-dark-gray border border-primary broder-3" type="email" id="useremail" placeholder="請輸入電子郵件">
-                </div>
-                
-                <div class="d-flex mb-4">
-                  <label for="userpassword">
-                    <span class="material-icons-round me-1 text-primary wh-36 fs-3 d-flex align-items-center">
-                      lock
-                      </span>
-                  </label>
-                  <input class="w-100 ps-2 fz-16 bg-dark-gray border border-primary broder-3" type="password" id="userpassword" placeholder="請輸入密碼"> 
-                </div>
-                
-                <button type="submit" class="btn btn-primary d-block w-100">
-                  登入
-                  <img class="h-36" src="data:image/png;base64,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" alt="貓掌印">
-                </button>
-               
-              </form>
-            </div>
-            <div class="conversation text-center">
-              <a class="d-block w-100 hover-opacity-7" href="register.html">
-                <img class="wh-480" src="/2023Hexschool_stock_project/assets/Desktop_kv-41e9b0b3.png" alt="正在敲鍵盤的貓貓圖片">
-              </a>
-              
-            </div>
-          </div>
-        </div>
-      
-    </div>
-    
+    <div class="d-flex flex-row ps-3">
 
+      <!-- 主要呈現部分 -->
+    <div class="container">
+        <div class="">
+
+            <nav>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active fw-bold fs-3" aria-current="page" href="#">我的追蹤</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fw-bold fs-3" href="#">金融股清單</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fw-bold fs-3" href="#">+</a>
+                    </li>
+                    
+                  </ul>
+
+            </nav>
+
+                <div class="box mt-3"> 
+                      
+                     <div class="d-flex flex-md-row flex-column col-8"> 
+                        <input type="text" value="新增追蹤到此清單" class="padding-15 lightgrey pr_textbox" >
+                        <div class="d-flex flex-md-row flex-column">
+                            <input type="button" class="m-2 pr_button" value="新增追蹤" onclick="location.href='要前往的網頁連結'">
+                            
+                            <input type="button" class="m-2 pr_button" value="匯出excel" onclick="location.href='要前往的網頁連結'">
+                            
+                            <input type="button" class="m-2 pr_button" value="刪除追蹤" onclick="location.href='要前往的網頁連結'">
+                            
+                            <input type="button" class="m-2 pr_button" value="刪除此清單" onclick="location.href='要前往的網頁連結'">
+                        </div>
+                    </div>
+                      
+                </div>
+
+
+
+            
+
+            <div class="d-flex justify-content-between pr_backgroundColor mt-5 align-items-center">
+
+                    <div class="col text-center">共35筆</div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <ul class="d-flex pt-3">
+                            <li class="me-1 text-center"><a href="#">«</a></li>
+                            <li class="me-1 text-center"><a href="#">1</a></li>
+                            <li class="me-1 text-center"><a class="active" href="#">2</a></li>
+                            <li class="me-1 text-center"><a href="#">3</a></li>
+                            <li class="me-1 text-center"><a href="#">4</a></li>
+                            <li class="me-1 text-center"><a href="#">5</a></li>
+                            <li class="me-1 text-center"><a href="#">6</a></li>
+                            <li class="me-1 text-center"><a href="#">7</a></li>
+                            <li class="me-1 text-center"><a href="#">»</a></li>
+                          </ul>
+                        </div>
+
+                    <div class="col text-center">顯示
+                        <select class=" pr_drowdown me-2" id="floatingSelect" aria-label="Floating label select example">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                        </select>筆
+                    </div>
+
+            </div>
+            <table class="table mt-2 me-2 mb-5">
+                <thead class="mt-5">
+                    <tr>
+                        <th scope="col">選取</th>
+                        <th scope="col">股票名稱/代碼</th>
+                        <th scope="col">股票成交量(張)</th>
+                        <th scope="col">股價</th>
+                        <th scope="col">漲幅</th>
+                        <th scope="col">刪除</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                  <tr class="table-danger">
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>A股/0050</td>
+                    <td>200,000</td>
+                    <td>100.50</td>
+                    <td><span>9.45</span></td>
+                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>B股/0760</td>
+                    <td>10,000</td>
+                    <td>37.50</td>
+                    <td>2.20</td>
+                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>C股/2100</td>
+                    <td>1,000</td>
+                    <td>1.50</td>
+                    <td>1.45</td>
+                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>D股/1150</td>
+                    <td>9,000</td>
+                    <td>10.50</td>
+                    <td>2.45</td>
+                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>E股/3022</td>
+                    <td>500,000</td>
+                    <td>378.50</td>
+                    <td>10.05</td>
+                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>D股/1150</td>
+                    <td>9,000</td>
+                    <td>10.50</td>
+                    <td>2.45</td>
+                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>D股/1150</td>
+                    <td>9,000</td>
+                    <td>10.50</td>
+                    <td>2.45</td>
+                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            
+               
+        </div>
+        
+    </div>
+ 
+
+
+    <div class="m-3 p-1">
+             
+    </div>
+</div>
+
+   
+ 
     <footer class="footer">
     <div class="container">
         <div class="row position-relative">

@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <title>財經貓</title>
-    <script type="module" crossorigin src="/2023Hexschool_stock_project/assets/main-1c25a930.js"></script>
-    <link rel="stylesheet" href="/2023Hexschool_stock_project/assets/main-82ec8de1.css">
+    <script type="module" crossorigin src="/2023Hexschool_stock_project/assets/main-4f304b7d.js"></script>
+    <link rel="stylesheet" href="/2023Hexschool_stock_project/assets/main-ca41ae44.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -41,36 +41,105 @@
     </div>
 </nav>
 
-    <div class="search">
-      <div class="container">
-        <div class="d-flex">
-          <div class="row">
-            <div class="col-12 col-lg-6">
-                <h1 class="text-primary">搜尋你感興趣的股票</h1>
-                <form action="#">
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="輸入台股代碼，搜尋公司價值" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-primary" type="submit" id="button-addon2"><i class="bi bi-search"></i></button>
-                  </div>
-                </form>
-                <div class="d-flex">
-                    <p class="me-3 text-black">推薦股票</p>
-                    <a class="me-3 text-primary" href="#">台積電</a>
-                    <a class="me-3 text-primary" href="#">中華電信</a>
-                    <a class="me-3 text-primary" href="#">中國鋼鐵</a>
+    
+    <div class="bg-light-orange p-5">
+    <div class="container">
+      <div class="d-flex">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+              <h3 class="text-primary">搜尋你感興趣的股票</h3>
+              <form action="#">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="輸入台股代碼，搜尋公司價值" aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <a class="btn btn-outline-primary" type="button" id="button-addon2" href="list_page.html"><i class="bi bi-search"></i></a>
                 </div>
-                
-            </div>
-            <div class="col-12 col-lg-6">
-                <!-- <img class="img-fluid" src="../assets/images/Mobile_kv.png" alt="cat"> -->
-                <img class="img-lg-fluid" height="526" src="/2023Hexschool_stock_project/assets/Desktop_kv-41e9b0b3.png" alt="cat">
-            </div>
+              </form>
+              <div class="d-flex">
+                  <p class="me-3 text-black">推薦股票</p>
+                  <a class="me-3 text-primary" href="#">台積電</a>
+                  <a class="me-3 text-primary" href="#">中華電信</a>
+                  <a class="me-3 text-primary" href="#">中國鋼鐵</a>
+              </div>
+              
+          </div>
+          <div class="col-12 col-lg-6">
+              <img class="d-block d-lg-none img-fluid" src="/2023Hexschool_stock_project/assets/Mobile_kv-1e0fb819.png" alt="cat_mobile">
+              <img class="d-none d-lg-block img-fluid" src="/2023Hexschool_stock_project/assets/Desktop_kv-41e9b0b3.png" alt="cat">
           </div>
         </div>
       </div>
     </div>
-    
-    
+  </div>
+    <div class="bg-accent-pink p-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-lg-4">
+                <img src="/2023Hexschool_stock_project/assets/Desktop_kv2-276ade27.png" alt="Desktop_kv2" class="d-none d-lg-block img-fluid">
+                <img src="/2023Hexschool_stock_project/assets/Mobile_kv2-602c2d51.png" alt="Mobile_kv2" class="d-block d-lg-none img-fluid">
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="position-relative d-none d-lg-block">
+                    <img src="/2023Hexschool_stock_project/assets/cloud-b8c7ad99.png" alt="cloud" class="d-none d-lg-block img-fluid">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <p class="text-primary">可以看新聞觀察公司現況， 現在這個年代貓咪也要學投資！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <nav class="navbar navbar-light bg-light-brown mb-3 border-bottom border-primary border-2">
+                    <div class="container-fluid">
+                        <span class="navbar-text">
+                            共 6,199 筆新聞
+                        </span>
+                      <form class="d-flex">
+                        <div class="col-4">
+                            <div class="navbar-text">排序方式</div>
+                        </div>
+                        <div class="col-8">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="0">依發布時間</option>
+                                <option value="1">只顯示股票新聞</option>
+                                <option value="2">只顯示 ETF 新聞</option>
+                            </select>
+                        </div>
+                      </form>
+                    </div>
+                </nav>
+                <!-- 卡片一樣高度 source: https://www.codehim.com/bootstrap/bootstrap-cards/bootstrap-5-equal-height-cards/ -->
+                <ul class="row row-cols-1 row-cols-md-3 g-4">
+                    <li class="col d-flex align-items-stretch">
+                      <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+                        <img src="/2023Hexschool_stock_project/assets/Desktop_news1-398ac52d.png" class="card-img-top" alt="Desktop_news1">
+                        <div class="card-body">
+                          <h5 class="card-title">台積電高雄廠轉先進製程 王美花：台中廠仍在都審</h5>
+                          <p class="card-text">台積電預計在台中與高雄繼續建廠，經濟部長王美花4日表示，台積電在台中的2奈米場域仍在台中市政府都市計畫審查中，至於高雄廠部分，高雄市政府也積極協助處理水電...</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col d-flex align-items-stretch">
+                      <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+                        <img src="/2023Hexschool_stock_project/assets/Desktop_news2-a6e485e3.png" class="card-img-top" alt="Desktop_news2">
+                        <div class="card-body">
+                          <h5 class="card-title">晶技Q3營運展望佳 股價緩步填息站上短期均線</h5>
+                          <p class="card-text">頻率元件廠晶技 (3042-TW) 對第三季接單能見度漸增，預估營收將較第二季雙位數成長，本周股價收在 91 元，周漲 1%，股價已站上所有短期均線，且技術線型轉佳，有利...</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col d-flex align-items-stretch">
+                      <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+                        <img src="/2023Hexschool_stock_project/assets/Desktop_news3-9b09b701.png" class="card-img-top" alt="Desktop_news3">
+                        <div class="card-body">
+                          <h5 class="card-title">山富後市營運續旺</h5>
+                          <p class="card-text">山富（2743）股價4日開高走高，終場上漲3.33％、收在139.5元，位居觀光股前段班。不過，上周合計仍下跌10.58％，周線終止連二紅。山富股價自5月中起漲，一個...</p>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>    
 
     <footer class="footer">
     <div class="container">
