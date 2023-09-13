@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>財經貓</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <div class="bg-light-orange">
+      <div class="container member-info">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+              <!-- 上傳大頭貼 -->
+              <div class="border-bottom border-primary pb-5">
+                <img class="radius-percent-50  wh-140 me-4" src="https://fakeimg.pl/275x275/">
+                <button type="button" class="btn btn-outline-primary text-primary">
+                  上傳大頭貼
+                  <img class="wh-36" src="../assets/images/paw.png" alt="paw">
+                </button>
+              </div>
+
+              
+              <form action="">
+                <!-- 修改密碼 -->
+              <div class="border-bottom border-primary py-5">
+                <span class="fs-5 fw-700 d-block mb-4">修改密碼</span>
+                <label class="d-block mb-2" for="old_password">舊密碼</label>
+                <div class="row d-flex justify-content-center mb-4">
+                  <div class="col-11">
+                    <input class="w-100 radius-10px py-2 ps-3  border-primary border" type="text" name="old_password" id="old_password" placeholder="請輸入舊密碼">
+                  </div>
+                </div>
+                <label class="d-block mb-2" for="new_password">新密碼</label>
+                <div class="row d-flex justify-content-center mb-4">
+                  <div class="col-11">
+                    <input class="w-100 radius-10px py-2 ps-3  border-primary border" type="text" name="new_password" id="new_password" placeholder="請輸入新密碼">
+                  </div>
+                </div>
+                <label class="d-block mb-2" for="new_password_again">舊密碼</label>
+                <div class="row d-flex justify-content-center">
+                  <div class="col-11">
+                    <input class="w-100 radius-10px py-2 ps-3  border-primary border" type="text" name="new_password_again" id="new_password_again" placeholder="再輸入一次新密碼">
+                  </div>
+                </div>
+                
+
+              </div>
+
+              <!-- 顯示名稱 -->
+              <div class="pt-5">
+                <label class="fs-5 fw-700 d-block mb-4" for="username">顯示名稱</label>
+                <div class="row d-flex justify-content-center mb-4">
+                  <div class="col-11">
+                    <input class="w-100 radius-10px py-2 ps-3  border-primary border" type="text" name="username" id="username" placeholder="請輸入暱稱">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 儲存變更 -->
+              <button type="submit" class="btn btn-primary d-block mx-auto">儲存設定</button>
+
+              
+              </form>
+              
+              
+            </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
