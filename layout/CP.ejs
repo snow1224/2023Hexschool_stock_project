@@ -159,21 +159,104 @@
                         股票走勢圖
                     </h3>
                 </div>
+                <!-- 要換成chartJS -->
                 <figure class="figure">
                     <img src="../assets/images/Picture.webp" class="d-block mx-auto img-fluid">
                     <figcaption class="figure-caption text-center bg-primary text-white">當前股價趨勢圖</figcaption>
                 </figure>
+                <!-- 5張圖片放置區，要更動上放圖片 -->
+
+                <!-- 5張圖片放置區，要更動上放圖片 -->
+
+                <!-- tab頁籤 顯示公司資訊 -->
+                <ul class="nav nav-pills mb-3" id="pills-finger-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-finger-tab" data-bs-toggle="pill" data-bs-target="#pills-finger" type="button" role="tab" aria-controls="pills-finger" aria-selected="true">財報指標說明</button>
+                    </li>
+                    <!-- <li class="nav-item border" role="presentation">
+                      <button class="nav-link" id="pills-product-tab" data-bs-toggle="pill" data-bs-target="#pills-product" type="button" role="tab" aria-controls="pills-product" aria-selected="false">產品資訊</button>
+                    </li> -->
+                    
+                </ul>
+                <div class="tab-content border border-primary border-2 mb-3" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-finger" role="tabpanel" aria-labelledby="pills-finger-tab">
+                        <h4 class="text-primary">各種指標說明</h4>
+                        <h5 class="bg-primary text-white">1、EPS</h5>
+                        <p>這裡樣放公司EPS資訊</p>
+
+                        <h5 class="bg-primary text-white">2、自由現金流</h5>
+                        <p>這裡樣放公司自由現金流資訊</p>
+
+                        <h5 class="bg-primary text-white">3、本益比</h5>
+                        <p>這裡樣放公司投本益比資訊</p>
+
+
+                    </div>
+                    <!-- <div class="tab-pane fade" id="pills-product" role="tabpanel" aria-labelledby="pills-product-tab">
+                        <h4 class="text-primary">產品介紹</h4>
+                        <h5 class="bg-primary text-white">產品種類</h5>
+                        <ol>
+                            <li>A產品</li>
+                            <li>B產品</li>
+                            <li>C產品</li>
+                        </ol>
+                    </div> -->
+                </div>
+                <!-- tab頁籤 顯示公司資訊 -->
+                <!-- 相關新聞 -->
+
+                <!-- 相關新聞 -->
+                <!-- 留言區 -->
+
+                <!-- 留言區 -->
+
 
             </div>
             <div class="col-md-4">
                 <div class="text-center pr_backgroundColor border_top  ">
                     <h3 class="fw-bold pr_color">
-                        股票名稱
+                        A股票(代號123)
                     </h3>
                 </div>
                 <h5 class="text-center"><span class="badge bg-accent-pink text-primary">半導體</span></h5>
                 <h4 class="text-center">現在股價<i class="bi bi-currency-dollar text-primary"></i>569台幣</h4>
-                <!-- list item -->
+                <!-- tab頁籤 顯示公司資訊 -->
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-intro-tab" data-bs-toggle="pill" data-bs-target="#pills-intro" type="button" role="tab" aria-controls="pills-intro" aria-selected="true">公司資訊</button>
+                    </li>
+                    <li class="nav-item border" role="presentation">
+                      <button class="nav-link" id="pills-product-tab" data-bs-toggle="pill" data-bs-target="#pills-product" type="button" role="tab" aria-controls="pills-product" aria-selected="false">產品資訊</button>
+                    </li>
+                    
+                </ul>
+                <div class="tab-content border-dashed border-primary border-2 mb-3" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-intro" role="tabpanel" aria-labelledby="pills-intro-tab">
+                        <h4 class="text-primary">公司介紹</h4>
+                        <h5 class="bg-primary text-white">1、歷史</h5>
+                        <p>這裡樣放公司歷史資訊</p>
+
+                        <h5 class="bg-primary text-white">2、人數</h5>
+                        <p>這裡樣放公司人數資訊</p>
+
+                        <h5 class="bg-primary text-white">3、投資人專區</h5>
+                        <p>這裡樣放公司投資人專區資訊(ex: 投資人專區網址、財報相關連結等)</p>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-product" role="tabpanel" aria-labelledby="pills-product-tab">
+                        <h4 class="text-primary">產品介紹</h4>
+                        <h5 class="bg-primary text-white">產品種類</h5>
+                        <ol>
+                            <li>A產品</li>
+                            <li>B產品</li>
+                            <li>C產品</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- tab頁籤 顯示公司資訊 -->
+                <button class="btn btn-primary w-100 mb-3"><i class="bi bi-heart-fill text-danger"></i> 評價</button>
+                <button class="btn btn-primary w-100"><i class="bi bi-star-fill text-warning"></i> 追蹤</button>
             </div>
         </div>
 
