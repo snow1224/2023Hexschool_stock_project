@@ -53,13 +53,9 @@ input, textarea{
 }
 
 .table-danger {
-    --bs-table-color: red;
-    
     border-color: #947155;
 }
 .table-success {
-    --bs-table-color: green;
-    
     border-color: #947155;
 }
 
@@ -217,4 +213,20 @@ ul{
 .imgSize{
     width: 20px;
     height: 20px;
+}
+
+//table裡用來顯示出漲幅
+.list1{
+    color: red !important;
+    &::before{
+        content: "▲";/*填上你想要的項目符號*/
+        margin-right: 1px;
+    }
+}
+.list2{
+    color: green !important;
+    &::before{
+        content: "▼";/*填上你想要的項目符號*/
+        margin-right: 1px;
+    }
 }
