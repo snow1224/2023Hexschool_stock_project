@@ -44,19 +44,7 @@
             <div class="d-flex justify-content-between pr_backgroundColor mt-5 align-items-center">
 
                     <div class="col text-center">共35筆</div>
-                    <div class="col d-flex justify-content-center align-items-center">
-                        <ul class="d-flex pt-3">
-                            <li class="me-1 text-center"><a href="#">«</a></li>
-                            <li class="me-1 text-center"><a href="#">1</a></li>
-                            <li class="me-1 text-center"><a class="active" href="#">2</a></li>
-                            <li class="me-1 text-center"><a href="#">3</a></li>
-                            <li class="me-1 text-center"><a href="#">4</a></li>
-                            <li class="me-1 text-center"><a href="#">5</a></li>
-                            <li class="me-1 text-center"><a href="#">6</a></li>
-                            <li class="me-1 text-center"><a href="#">7</a></li>
-                            <li class="me-1 text-center"><a href="#">»</a></li>
-                          </ul>
-                        </div>
+                    
 
                     <div class="col text-center">顯示
                         <select class=" pr_drowdown me-2" id="floatingSelect" aria-label="Floating label select example">
@@ -129,15 +117,39 @@
                   
                 </tbody>
               </table>
-            
-                <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-5" type="button">
+              <div class="d-flex justify-content-center"> 
+                <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-3" type="button">
                     追蹤
                 </button>
-                <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-5" type="button">
+                <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-3" type="button">
                     匯出excle
                 </button>
-    </div>
-        
+              </div>
+                <!-- 分頁 -->
+                <div class="d-flex justify-content-center"> 
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item" aria-current="page">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                </div>
+                
+            </div>
+        </div>
     </div>
     
 </div>
