@@ -1,7 +1,130 @@
 <div class="d-flex flex-row ps-3">
         <div class="col-md-3 upper">
-            <input type="checkbox" name="" id="sideMenu-active" />
-          <div class="row sideMenu me-md-2 me-10">
+            <input type="checkbox" name="" id="sideMenu-active" onclick="openNav()" />
+            <label for="sideMenu-active" class="labelSidebar">
+                <i class="fas fa-angle-right"></i>
+            </label>
+            <!-- for Computer -->
+            <div class="row sidenavComputer me-md-2 me-10">
+                    <!-- 標題 -->
+                    <h1 class="letter-spaing-1em fw-bold Noto-Sans-CJK-TC fs-3 pr_color">股票分類</h1>
+                    
+                    <!-- side menu -->
+                    
+                    <div class="container m-md-2">
+                        <!-- 摺疊按鈕 -->
+                        <a class="btn-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                            <span class="d-flex mb-3">
+                                <span class="material-icons removeIcon fs-10 me-3">
+                                    remove
+                                </span>
+                                <span class="material-icons addIcon fs-10 me-3">
+                                    add
+                                </span>
+                                ETF
+                            </span>
+                        </a>
+                        <!-- 摺疊選單 -->
+                        <div class="collapse show border_bottom m-md-2" id="collapseExample">
+                           
+                                <ul>
+                                    <li class="m-2 pr_color">
+                                        <label><input type="checkbox" class="me-md-2" name="" vaule="">區域型</label>
+                                    </li>
+                                    <li class="m-2 pr_color">
+                                        <label><input type="checkbox" class="me-md-2" name="" vaule="">單一國家型</label>
+                                    </li>
+                                    <li class="m-2 pr_color">
+                                        <label><input type="checkbox" class="me-md-2" name="" vaule="">產業型</label>
+                                    </li>
+                                    <li class="m-2 pr_color">
+                                        <label><input type="checkbox" class="me-md-2" name="" vaule="">主題型</label>
+                                    </li>
+                                </ul>
+                           
+                        </div>
+                         <!-- 摺疊選單 -->
+    
+    
+                        <!-- 摺疊按鈕 -->
+                        <a class="btn-link" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="true" aria-controls="collapseExample2">
+                            <span class="d-flex mb-3">
+                                <span class="material-icons removeIcon fs-10 me-3">
+                                    remove
+                                </span>
+                                <span class="material-icons addIcon fs-10 me-3">
+                                    add
+                                </span>
+                                股票
+                            </span>
+                        </a>
+                        <!-- 摺疊選單 -->
+                        <div class="collapse show border_bottom m-md-2" id="collapseExample2">
+                           
+                                <ul>
+                                    <li class="m-2 pr_color">
+                                        <label><input type="checkbox" class="me-md-2" name="" vaule="">金融股</label>
+                                    </li>
+                                    <li class="m-2 pr_color">
+                                        <label><input type="checkbox" class="me-md-2" name="" vaule="">科技股</label>
+                                    </li>
+                                    <li class="m-2 pr_color">
+                                        <label><input type="checkbox" class="me-md-2" name="" vaule="">概念股</label>
+                                    </li>
+                                    <li class="m-2 pr_color">
+                                        <label><input type="checkbox" class="me-md-2" name="" vaule="">民生股</label>
+                                    </li>
+                                    <li class="m-2 pr_color">
+                                        <label><input type="checkbox" class="me-md-2" name="" vaule="">電信股</label>
+                                    </li>
+                                    <li class="m-md-2">
+                                        <a href="#">MORE</a>
+                                    </li>
+                                </ul>
+                            
+                        </div>
+                        <!-- 摺疊選單 -->
+                        <!-- 摺疊按鈕 -->
+                        <a class="btn-link" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="true" aria-controls="collapseExample3">
+                            <span class="d-flex mb-3">
+                                <span class="material-icons removeIcon fs-10 me-3">
+                                    remove
+                                </span>
+                                <span class="material-icons addIcon fs-10 me-3">
+                                    add
+                                </span>
+                                價錢
+                            </span>
+                        </a>
+                        <!-- 摺疊選單 -->
+                        <div class="collapse show border_bottom me-2 ms-md-2 mt-md-2 mb-4" id="collapseExample3">
+                                <ul>
+                                    <li class="m-2">
+                                        <label><input type="textbox" class="pr_textbox me-md-2" name="" vaule="" ></label>
+                                    </li>
+                                    
+                                </ul>
+                        </div>
+                        <!-- 摺疊選單 -->
+    
+                        <div class="mb-md-4">
+                            <ul>
+                                <li class="m-2">
+                                    <button alt="search" class="btn btn-primary">
+                                        <div class="fit">查詢分類</div>
+                                    </button>
+                                </li>
+                                
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            <!-- for Computer -->
+            <!-- for Mobile -->
+          <div class="row sidenav me-md-2 me-10" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <!-- 標題 -->
                 <h1 class="letter-spaing-1em fw-bold Noto-Sans-CJK-TC fs-3 pr_color">股票分類</h1>
                 
@@ -106,7 +229,7 @@
                     <div class="mb-md-4">
                         <ul>
                             <li class="m-2">
-                                <button alt="search" class="pr_button">
+                                <button alt="search" class="btn btn-primary">
                                     <div class="fit">查詢分類</div>
                                 </button>
                             </li>
@@ -115,21 +238,17 @@
                         
                     </div>
                 </div>
-                <label for="sideMenu-active" class="labelSidebar">
-                    <i class="fas fa-angle-right"></i>
-                  </label>
+                
             </div>
-        
+             <!-- for Mobile -->
         </div>
 
       <!-- 主要呈現部分 -->
-    <div class="container col-md-9 lower">
+    <div class="container col-md-9">
         <div class="d-flex flex-row justify-content-around">
-
-
             <!-- 浮動標籤 -->
             <div class="form-floating mb-3">
-                <select class=" pr_drowdown me-2" id="floatingSelect" aria-label="Floating label select example">
+                <select class=" pr_drowdown me-2" aria-label="Floating label select example">
                             <option value="股票名稱">股票名稱</option>
                             <option value="股票代碼">股票代碼</option>
                             <option value="成交量">成交量</option>
@@ -146,7 +265,7 @@
             
               <div class="form-floating mb-3">
                     <div class="d-flex ">
-                        <button class="font-bold pr_button text-nowrap" type="button">
+                        <button class="font-bold btn btn-primary text-nowrap" type="button">
                                 查詢
                         </button>
                     </div>
@@ -253,22 +372,25 @@
                 </tbody>
               </table>
             
-                <button class="font-bold pr_button text-nowrap me-1 mt-2 ms-2 mb-5" type="button">
+                <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-5" type="button">
                     追蹤
                 </button>
-                <button class="font-bold pr_button text-nowrap me-1 mt-2 ms-2 mb-5" type="button">
+                <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-5" type="button">
                     匯出excle
                 </button>
         </div>
         
     </div>
- 
-
-
-    <div class="m-3 p-1">
-             
-    </div>
+    
 </div>
 
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
    
  

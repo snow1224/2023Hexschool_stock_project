@@ -85,6 +85,46 @@ ul{
     padding-left: 1px;
 }
 
+.sidenavComputer{
+    height: 100%;
+    border-right: 3px solid #d1d1d194;
+    @media (min-width: 768px) {
+        display: block;
+    }
+    display: none;
+}
+
+//sideBar
+.sidenav {
+    height: 100%;
+    width: 0;
+    border-right: 3px solid #d1d1d194;
+    display: flex;
+    flex-direction: column; //主軸
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    @media (min-width: 768px) {
+        display: none;
+    }
+  }
+
+  .sidenav .closebtn {
+    @media (min-width: 768px) {
+        display: none;
+        }
+    position: absolute;
+    top: -10px;
+    left: 140px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
 .labelSidebar {
     @media (min-width: 768px) {
     display: none;
@@ -94,7 +134,7 @@ ul{
     background-color: #d1d1d1;
     color: #686666;
     position: absolute; // 絕對定位在 sideMenu 上
-    right: -20px;
+    right: -10px;
     top: 0; //絕對定位垂直置中的技巧
     bottom: 0; //絕對定位垂直置中的技巧
     margin: auto;
@@ -103,10 +143,10 @@ ul{
     border-radius: 0 5px 5px 0;
     box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
   }
-  #sideMenu-active:checked + .sideMenu {
+  #sidenav-active:checked + .sideMenu {
     transform: translateX(0);
-    // 當我點擊 sideMenu 時，checkbox 會啟動 id，讓側邊選單跑出來
-    label .fas {
+    // 點擊 sideMenu 時，checkbox 會啟動 id，讓側邊選單跑出來
+    label .fas {//這是反轉icon
         transform: scaleX(-0.5);
     }
   }
@@ -117,34 +157,9 @@ ul{
     z-index: -1;
   }
 
-  .sideMenu {
-    width: auto;
-    height: 100%;
-    background-color: #ffffff;
-    border-right: 3px solid #d1d1d194;
-    display: flex;
-    flex-direction: column; //主軸
-    padding: 50px 0;
-    box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
-    position: relative;
-    @media (min-width: 768px) {
-        transform: translateX(0);
-        box-shadow: 0px 0 0px rgba(23, 23, 54, 0.6);
-    }
-    transform: translateX(-100%);
-    transition: 0.5s;
-  }
-
 .upper{
     z-index: 3;
     position: relative;
-}
-.lower{
-    @media (min-width: 768px) {
-        position: relative;
-    }
-    z-index: 2;
-    position: absolute;
 }
 
 .form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select {
