@@ -23,7 +23,7 @@
                 <div class="box mt-3"> 
                       
                      <div class="d-flex flex-md-row flex-column col-8"> 
-                        <input type="text" value="新增追蹤到此清單" class="padding-15 lightgrey pr_textbox" >
+                        <input type="text" value="新增追蹤到此清單" class="padding-15 lightgrey pr_textbox1" >
                         <div class="d-flex flex-md-row flex-column">
                             <input type="button" class="m-2 pr_button" value="新增追蹤" onclick="location.href='要前往的網頁連結'">
                             
@@ -41,128 +41,124 @@
 
             
 
-            <div class="d-flex justify-content-between pr_backgroundColor mt-5 align-items-center">
+                <div class="d-flex justify-content-between pr_backgroundColor mt-5 align-items-center">
 
-                    <div class="col text-center">共35筆</div>
-                    <div class="col d-flex justify-content-center align-items-center">
-                        <ul class="d-flex pt-3">
-                            <li class="me-1 text-center"><a href="#">«</a></li>
-                            <li class="me-1 text-center"><a href="#">1</a></li>
-                            <li class="me-1 text-center"><a class="active" href="#">2</a></li>
-                            <li class="me-1 text-center"><a href="#">3</a></li>
-                            <li class="me-1 text-center"><a href="#">4</a></li>
-                            <li class="me-1 text-center"><a href="#">5</a></li>
-                            <li class="me-1 text-center"><a href="#">6</a></li>
-                            <li class="me-1 text-center"><a href="#">7</a></li>
-                            <li class="me-1 text-center"><a href="#">»</a></li>
-                          </ul>
-                        </div>
+                  <div class="col text-center">共35筆</div>
+                  <div class="col text-center">顯示
+                      <select class=" pr_drowdown me-2" id="floatingSelect" aria-label="Floating label select example">
+                          <option value="5">5</option>
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                          <option value="30">30</option>
+                      </select>筆
+                  </div>
 
-                    <div class="col text-center">顯示
-                        <select class=" pr_drowdown me-2" id="floatingSelect" aria-label="Floating label select example">
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                        </select>筆
-                    </div>
+          </div>
+          <div class="">
 
+          </div>
+          <table class="table mt-2 me-2 mb-2">
+              <thead class="mt-5">
+                  <tr class="text-center">
+                      <th scope="col">選取</th>
+                      <th scope="col">股票名稱/代碼</th>
+                      <th scope="col">股票成交量(張)</th>
+                      <th scope="col">股價</th>
+                      <th scope="col">漲幅</th>
+                      <th scope="col">刪除</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  
+                <tr class="table-danger text-center">
+                  <th scope="row">
+                      <input type="checkbox">
+                  </th>
+                  <td><a href="content_page.html">A股/0050</a></td>
+                  <td>200,000</td>
+                  <td>100.50</td>
+                  <td class="list1">9.45</td>
+                  <td><a href="javascript:void(0)"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize imageRecolor"></a></td>
+                </tr>
+                <tr class="text-center">
+                  <th scope="row">
+                      <input type="checkbox">
+                  </th>
+                  <td><a href="content_page.html">B股/0760</a></td>
+                  <td>10,000</td>
+                  <td>37.50</td>
+                  <td>2.20</td>
+                  <td><a href="javascript:void(0)"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize imageRecolor"></a></td>
+                </tr>
+                <tr class="table-success text-center">
+                  <th scope="row">
+                      <input type="checkbox">
+                  </th>
+                  <td><a href="content_page.html">C股/2100</a></td>
+                  <td>1,000</td>
+                  <td>1.50</td>
+                  <td class="list2">1.45</td>
+                  <td><a href="javascript:void(0)"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize imageRecolor"></a></td>
+                </tr>
+                <tr class="text-center">
+                  <th scope="row">
+                      <input type="checkbox">
+                  </th>
+                  <td><a href="content_page.html">D股/1150</a></td>
+                  <td>9,000</td>
+                  <td>10.50</td>
+                  <td class="list1">2.45</td>
+                  <td><a href="javascript:void(0)"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize imageRecolor"></a></td>
+                </tr>
+                <tr class="table-danger text-center">
+                  <th scope="row">
+                      <input type="checkbox">
+                  </th>
+                  <td><a href="content_page.html">E股/3022</a></td>
+                  <td>500,000</td>
+                  <td>378.50</td>
+                  <td class="list1">10.05</td>
+                  <td><a href="javascript:void(0)"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize imageRecolor"></a></td>
+                </tr>
+                <tr>
+                
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-center"> 
+              <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-3" type="button">
+                  追蹤
+              </button>
+              <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-3" type="button">
+                  匯出excle
+              </button>
             </div>
-            <table class="table mt-2 me-2 mb-5">
-                <thead class="mt-5">
-                    <tr>
-                        <th scope="col">選取</th>
-                        <th scope="col">股票名稱/代碼</th>
-                        <th scope="col">股票成交量(張)</th>
-                        <th scope="col">股價</th>
-                        <th scope="col">漲幅</th>
-                        <th scope="col">刪除</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                  <tr class="table-danger">
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td>A股/0050</td>
-                    <td>200,000</td>
-                    <td>100.50</td>
-                    <td><span>9.45</span></td>
-                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td>B股/0760</td>
-                    <td>10,000</td>
-                    <td>37.50</td>
-                    <td>2.20</td>
-                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
-                  </tr>
-                  <tr class="table-success">
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td>C股/2100</td>
-                    <td>1,000</td>
-                    <td>1.50</td>
-                    <td>1.45</td>
-                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td>D股/1150</td>
-                    <td>9,000</td>
-                    <td>10.50</td>
-                    <td>2.45</td>
-                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
-                  </tr>
-                  <tr class="table-danger">
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td>E股/3022</td>
-                    <td>500,000</td>
-                    <td>378.50</td>
-                    <td>10.05</td>
-                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td>D股/1150</td>
-                    <td>9,000</td>
-                    <td>10.50</td>
-                    <td>2.45</td>
-                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td>D股/1150</td>
-                    <td>9,000</td>
-                    <td>10.50</td>
-                    <td>2.45</td>
-                    <td><a href="#"><img src="https://cdn.pixabay.com/photo/2013/07/13/12/32/cross-159808_1280.png" class="img-fluid imgSize"></a></td>
-                  </tr>
-                </tbody>
-              </table>
+              <!-- 分頁 -->
+              <div class="d-flex justify-content-center"> 
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination">
+                          <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item" aria-current="page">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+              </div>
+              
             
                
         </div>
         
-    </div>
- 
-
-
-    <div class="m-3 p-1">
-             
     </div>
 </div>
 

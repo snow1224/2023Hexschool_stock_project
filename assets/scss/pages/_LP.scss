@@ -76,6 +76,14 @@ input, textarea{
     padding: 8px 8px 8px 8px;
     color: #947155;
 }
+.pr_textbox1{
+    width: auto;
+    border-radius: 5px;
+    border: 1px solid #947155;
+    background-origin: padding-box;
+    padding: 8px 8px 8px 8px;
+    color: #947155;
+}
 
 ul{
     padding-left: 1px;
@@ -190,9 +198,20 @@ ul{
     height: auto;
 }
 
+.imageRecolor{
+    &:hover{
+        filter: opacity(0.6) drop-shadow(0 0 0 rgb(34, 0, 255)); 
+    }
+    &:active{
+        filter: opacity(0.4) drop-shadow(0 0 0 red); 
+        
+    }
+
+}
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-    color: #947155;
+    color: #ffffff;
+    background-color:#947155 ;
     border-color: #947155;
 }
 
@@ -200,7 +219,7 @@ ul{
     border: 1px solid transparent;
 
     &:hover{
-        color: #947155;
+        color: #000000;
 
     }
 }
