@@ -9,31 +9,18 @@
     line-height: 19.2px;
   }
 }
-
-.footer-line{
-  display: block;
-    &::after {
-      width: 10%;
-      height: 1px;
-      content: "";
-      background-color: $primary;
-      position: absolute;
-      top: 50%;
-      z-index: 1;
-      right: 20%;
-    }
-    &::before {
-      width: 10%;
-      height: 1px;
-      content: "";
-      background-color: $primary;
-      position: absolute;
-      top: 50%;
-      z-index: 1;
-      left: 20%;
-    }
+//變更圖片顏色
+//https://tw511.com/a/01/27406.html
+.img-dark-brown{
+  filter:grayscale(65%);
 }
 
+// text-black-30
+.text-black-30{
+  color: $brown-30;
+}
+
+// footer線條偽元素製作
 .footer-line{
 
   span {
