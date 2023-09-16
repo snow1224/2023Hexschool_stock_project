@@ -5,3 +5,20 @@
 .text-truncate{
     overflow:none;
 }
+
+#img-switch img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .small-img {
+    display: flex;
+    width: 500px;
+  }
+  .small-img li {
+    margin-top: 12px;
+    margin-right: 8px;
+  }
+  .small-img a {
+    width: 100%;
+  }
