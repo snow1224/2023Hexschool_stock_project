@@ -11,6 +11,10 @@ $(function(){
     $('#img-switch .small-img a').click(function(e) {
         var $imgSrc = $(this).attr('href');
         $('#img-switch .big-img img').attr('src',$imgSrc);
+        //變更圖片說明
+        //source: https://blog.csdn.net/github_26672553/article/details/50747543
+        console.log($(this).find('img').attr('alt'));
+        $('figcaption').text($(this).find('img').attr('alt'));
         return false;
     });
 });
