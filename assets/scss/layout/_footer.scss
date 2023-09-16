@@ -9,3 +9,55 @@
     line-height: 19.2px;
   }
 }
+
+.footer-line{
+  display: block;
+    &::after {
+      width: 10%;
+      height: 1px;
+      content: "";
+      background-color: $primary;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      right: 20%;
+    }
+    &::before {
+      width: 10%;
+      height: 1px;
+      content: "";
+      background-color: $primary;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      left: 20%;
+    }
+}
+
+.footer-line{
+
+  span {
+    display: block;
+    font-size: 3em;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      background: $brown-10;
+      width: 40%;
+      height: 1px;
+      left: 5%;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      background: $brown-10;
+      width: 40%;
+      height: 1px;
+      right: 5%;
+    }
+  }
+
+} 
