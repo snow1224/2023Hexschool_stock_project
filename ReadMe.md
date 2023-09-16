@@ -14,6 +14,8 @@
     * npm i bootstrap-icons
 * 建置網頁
     * npm dev
+* 安裝chartJS
+    * npm install chart.js 
 
 ## 組員
 * 王雪朱(Julie, DC: meowmeow)

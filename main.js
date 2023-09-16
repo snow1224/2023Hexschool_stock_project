@@ -5,5 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 // 載入切換圖片的JS
 import './assets/js/chart.js';
+// 載入chartJS
+import 'chart.js/auto';
 
-console.log("Hello world!");
+//console.log("Hello world!");

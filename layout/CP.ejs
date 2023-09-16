@@ -38,13 +38,17 @@
                         股票走勢圖
                     </h3>
                 </div>
-                <!-- 要換成chartJS -->
+                <!-- 要換成chartJS，要思考一下，如何將chartJS當成圖片切換，可考慮將圖表用成後端，使用API讀取 -->
                 <div id="img-switch">
                     <div class="big-img">
-                        <figure class="figure">
-                            <img src="../assets/images/Picture.webp" class="d-block mx-auto img-fluid">
-                            <figcaption class="figure-caption text-center bg-primary text-white">當前股價趨勢圖</figcaption>
-                        </figure>
+                        <div>
+                            <canvas id="myChart"></canvas>
+                            <p class="text-center bg-primary text-white">當前股價趨勢圖</p>
+                            <figure class="figure">
+                                <img src="../assets/images/Picture.webp" class="d-block mx-auto img-fluid">
+                                <figcaption class="figure-caption text-center bg-primary text-white">當前股價趨勢圖</figcaption>
+                            </figure>
+                        </div>
                     </div>
                     <ul class="small-img">
                       <li>
