@@ -304,11 +304,13 @@
    
  
       <!-- 主要呈現部分 -->
-    <div class="container col-md-9">
+    <div class="container">
         <div class="d-flex flex-row justify-content-around">
+
+
             <!-- 浮動標籤 -->
             <div class="form-floating mb-3">
-                <select class=" pr_drowdown me-2" aria-label="Floating label select example">
+                <select class=" pr_drowdown me-2" id="floatingSelect" aria-label="Floating label select example">
                             <option value="股票名稱">股票名稱</option>
                             <option value="股票代碼">股票代碼</option>
                             <option value="成交量">成交量</option>
@@ -330,136 +332,226 @@
                         </button>
                     </div>
               </div>                  
-            </div>
-
-            <div class="text-center pr_backgroundColor border_top  ">
-                <h3 class="fw-bold pr_color">
-                    台股大盤走勢
-                </h3>
-            </div>
-            <div class="col-md-12">
-                <div class="d-flex justify-content-center">
-                    <img src="/2023Hexschool_stock_project/assets/Picture-7639528d.webp" class="reSize">
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="text-center pr_backgroundColor border_top  ">
+                    <h3 class="fw-bold pr_color">
+                        股票走勢圖
+                    </h3>
                 </div>
-            </div>
-
-            <div class="d-flex justify-content-between pr_backgroundColor mt-5 align-items-center">
-                    <div class="col text-center">共35筆</div>
-                    <div class="col text-center">顯示
-                        <select class=" pr_drowdown me-2" id="floatingSelect" aria-label="Floating label select example">
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                        </select>筆
+                <!-- 要換成chartJS，要思考一下，如何將chartJS當成圖片切換，可考慮將圖表用成後端，使用API讀取 -->
+                <div id="img-switch">
+                    <div class="big-img">
+                        <div>
+                            <!-- <canvas id="myChart"></canvas>
+                            <p class="text-center bg-primary text-white">當前股價趨勢圖</p> -->
+                            <figure class="figure">
+                                <img src="/2023Hexschool_stock_project/assets/Picture-7639528d.webp" class="d-block mx-auto img-fluid">
+                                <figcaption class="figure-caption text-center bg-primary text-white">當前股價趨勢圖</figcaption>
+                            </figure>
+                        </div>
                     </div>
-            </div>
-            <table class="table mt-2 me-2 mb-2">
-                <thead class="mt-5">
-                    <tr class="text-center">
-                        <th scope="col">選取</th>
-                        <th scope="col">股票名稱/代碼</th>
-                        <th scope="col">股票成交量(張)</th>
-                        <th scope="col">股價</th>
-                        <th scope="col">漲幅</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                  <tr class="table-danger text-center">
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td><a href="content_page.html">A股/0050</a></td>
-                    <td>200,000</td>
-                    <td>100.50</td>
-                    <td class="list1">9.45</td>
-                  </tr>
-                  <tr class="text-center">
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td><a href="content_page.html">B股/0760</a></td>
-                    <td>10,000</td>
-                    <td>37.50</td>
-                    <td>2.20</td>
-                  </tr>
-                  <tr class="table-success text-center">
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td><a href="content_page.html">C股/2100</a></td>
-                    <td>1,000</td>
-                    <td>1.50</td>
-                    <td class="list2">1.45</td>
-                  </tr>
-                  <tr class="text-center">
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td><a href="content_page.html">D股/1150</a></td>
-                    <td>9,000</td>
-                    <td>10.50</td>
-                    <td class="list1">2.45</td>
-                  </tr>
-                  <tr class="table-danger text-center">
-                    <th scope="row">
-                        <input type="checkbox">
-                    </th>
-                    <td><a href="content_page.html">E股/3022</a></td>
-                    <td>500,000</td>
-                    <td>378.50</td>
-                    <td class="list1">10.05</td>
-                  </tr>
-                  <tr>
-                  
-                </tbody>
-              </table>
-              <div class="d-flex justify-content-center"> 
-                <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-3" type="button">
-                    追蹤
-                </button>
-                <button class="font-bold btn btn-primary text-nowrap me-1 mt-2 ms-2 mb-3" type="button">
-                    匯出excle
-                </button>
-              </div>
-                <!-- 分頁 -->
-                <div class="d-flex justify-content-center"> 
-                      <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                  <span aria-hidden="true">&laquo;</span>
-                                </a>
-                              </li>
-                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item" aria-current="page">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                </div>
+                    <ul class="small-img">
+                      <li>
+                        <a href="../assets/images/Picture.webp">
+                            <img src="/2023Hexschool_stock_project/assets/Picture-7639528d.webp" alt="當前股價趨勢圖" class="d-block mx-auto img-fluid">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../assets/images/cash_flow.png">
+                            <img src="/2023Hexschool_stock_project/assets/cash_flow-9e62bf49.png" alt="現金流量圖" class="d-block mx-auto img-fluid">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../assets/images/PERatio.png">
+                            <img src="/2023Hexschool_stock_project/assets/PERatio-94b8e3b9.png" alt="本益比河流圖" class="d-block mx-auto img-fluid">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../assets/images/profit_loss.png">
+                            <img src="/2023Hexschool_stock_project/assets/profit_loss-4f54e5ef.png" alt="損益表圖" class="d-block mx-auto img-fluid">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 
+                <!-- 5張圖片放置區，要更動上放圖片 -->
+
+                <!-- 5張圖片放置區，要更動上放圖片 -->
+
+                <!-- tab頁籤 顯示公司資訊 -->
+                <ul class="nav nav-pills mb-3" id="pills-finger-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-finger-tab" data-bs-toggle="pill" data-bs-target="#pills-finger" type="button" role="tab" aria-controls="pills-finger" aria-selected="true">財報指標說明</button>
+                    </li>
+                    <!-- <li class="nav-item border" role="presentation">
+                      <button class="nav-link" id="pills-product-tab" data-bs-toggle="pill" data-bs-target="#pills-product" type="button" role="tab" aria-controls="pills-product" aria-selected="false">產品資訊</button>
+                    </li> -->
+                    
+                </ul>
+                <div class="tab-content border border-primary border-2 mb-3" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-finger" role="tabpanel" aria-labelledby="pills-finger-tab">
+                        <h4 class="text-primary">各種指標說明</h4>
+                        <h5 class="bg-primary text-white">1、EPS</h5>
+                        <p>這裡樣放公司EPS資訊</p>
+
+                        <h5 class="bg-primary text-white">2、自由現金流</h5>
+                        <p>這裡樣放公司自由現金流資訊</p>
+
+                        <h5 class="bg-primary text-white">3、本益比</h5>
+                        <p>這裡樣放公司投本益比資訊</p>
+
+
+                    </div>
+                    <!-- <div class="tab-pane fade" id="pills-product" role="tabpanel" aria-labelledby="pills-product-tab">
+                        <h4 class="text-primary">產品介紹</h4>
+                        <h5 class="bg-primary text-white">產品種類</h5>
+                        <ol>
+                            <li>A產品</li>
+                            <li>B產品</li>
+                            <li>C產品</li>
+                        </ol>
+                    </div> -->
+                </div>
+                <!-- tab頁籤 顯示公司資訊 -->
+                <!-- 相關新聞 -->
+                <div class="border-top border-bottom border-1 border-primary mb-3">
+                    <div class="pr_backgroundColor border_top">
+                        <h3 class="fw-bold pr_color text-center">相關新聞</h3>
+                    </div>
+                    <div class="card mb-3 w-100">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-4">
+                                <img class="img-fluid p-1" src="/2023Hexschool_stock_project/assets/news-63a11c0d.png" alt="news">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">台積電漲8元、聯發科漲33元！台股漲逾百點至17450點</h5>
+                                    <p class="card-text">台股今（31）日加權指數開盤漲48.11點，開在17341.04點，開盤1分鐘後指數漲逾150點，指數來到17450點，超越本波前高17401點。台積電（2330）開盤漲8元至575元；鴻海（2317）漲1元至110.50元；聯發科（2454）漲33元至691元；大立光（3008）漲10元至2180元；台達電（2308）漲8元至374.5元。緯創（3231）漲2元至159元；廣達（2382）漲5元至269.5元。</p>
+                                    <p class="card-text"><small class="text-muted">2023-07-31</small></p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto mb-3">
+                        <a class="mx-auto font-bold btn btn-primary text-nowrap" href="list_page.html">
+                            更多新聞
+                        </a>
+                    </div>
+                    
+                    <div class="pr_backgroundColor border_top">
+                        <h3 class="fw-bold pr_color text-center">相關新聞關鍵字</h3>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <p class="card-text">2023-07-31 台積電（2330）開盤漲8元至575元</p>
+                                    <p class="card-text">2023-06-15 台積電(2330)次交易(15)日除息2.75元，參考價587.25元</p>
+                                    <p class="card-text">2023-06-06 台積電召開年度股東會，說明2023年景氣不佳原因為主要是因為去年底庫存增加很多，其實去年的產業到今年希望中國開放後需求可以上來，但實際上並沒有上來很多，造成今年所有的產業很不好。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto mb-3">
+                        <a class="mx-auto font-bold btn btn-primary text-nowrap" href="list_page.html">
+                            更多新聞關鍵字
+                        </a>
+                    </div>
+                </div>
+                <!-- 相關新聞 -->
+                <!-- 留言區 -->
+                <div class="my-3">
+                    <div class="pr_backgroundColor border_top">
+                        <h3 class="fw-bold pr_color text-center">留言區</h3>
+                    </div>
+                    <div class="card mb-3 w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">A股票趨勢</h5>
+                            <p class="card-text">網友A：公司穩定成長，最近XXX趨勢，可以考慮投資，風險大約XXX，根據投資能承受風險進行投資！</p>
+                            <p class="card-text"><small class="text-muted">2023-07-31</small></p>
+                        </div>
+                    </div>
+
+                    <div class="pr_backgroundColor border_top">
+                        <h3 class="fw-bold pr_color text-center">留言回覆區</h3>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="title" class="form-label">標題</label>
+                            <input type="text" class="form-control" id="title">
+                            <label for="response" class="form-label">你的回覆</label>
+                            <textarea class="form-control" id="response" rows="3"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">評價</button>
+                        </div>
+                        
+                    </form>
+                    
+                </div>
+                <!-- 留言區 -->
+
+
+            </div>
+            <div class="col-md-4">
+                <div class="text-center pr_backgroundColor border_top  ">
+                    <h3 class="fw-bold pr_color">
+                        A股票(代號123)
+                    </h3>
+                </div>
+                <h5 class="text-center"><span class="badge bg-accent-pink text-primary">半導體</span></h5>
+                <h4 class="text-center">現在股價<i class="bi bi-currency-dollar text-primary"></i>569台幣</h4>
+                <!-- tab頁籤 顯示公司資訊 -->
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-intro-tab" data-bs-toggle="pill" data-bs-target="#pills-intro" type="button" role="tab" aria-controls="pills-intro" aria-selected="true">公司資訊</button>
+                    </li>
+                    <li class="nav-item border" role="presentation">
+                      <button class="nav-link" id="pills-product-tab" data-bs-toggle="pill" data-bs-target="#pills-product" type="button" role="tab" aria-controls="pills-product" aria-selected="false">產品資訊</button>
+                    </li>
+                    
+                </ul>
+                <div class="tab-content border-dashed border-primary border-2 mb-3" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-intro" role="tabpanel" aria-labelledby="pills-intro-tab">
+                        <h4 class="text-primary">公司介紹</h4>
+                        <h5 class="bg-primary text-white">1、歷史</h5>
+                        <p>這裡樣放公司歷史資訊</p>
+
+                        <h5 class="bg-primary text-white">2、人數</h5>
+                        <p>這裡樣放公司人數資訊</p>
+
+                        <h5 class="bg-primary text-white">3、投資人專區</h5>
+                        <p>這裡樣放公司投資人專區資訊(ex: 投資人專區網址、財報相關連結等)</p>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-product" role="tabpanel" aria-labelledby="pills-product-tab">
+                        <h4 class="text-primary">產品介紹</h4>
+                        <h5 class="bg-primary text-white">產品種類</h5>
+                        <ol>
+                            <li>A產品</li>
+                            <li>B產品</li>
+                            <li>C產品</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- tab頁籤 顯示公司資訊 -->
+                <button class="btn btn-primary w-100 mb-3"><i class="bi bi-heart-fill text-danger"></i> 評價</button>
+                <button class="btn btn-primary w-100"><i class="bi bi-star-fill text-warning"></i> 追蹤</button>
             </div>
         </div>
+
+            
+
+
     </div>
-    
+        
+ 
 </div>
 
-<script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-    }
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
-</script>
    
  
     <footer class="footer">
