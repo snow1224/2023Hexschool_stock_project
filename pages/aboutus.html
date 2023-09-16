@@ -17,11 +17,11 @@
         <div class="row">
           <div class="col-10 mx-auto">
   
-            <div class="row d-flex justify-content-around align-items-center pb-5 border-bottom border-primary broder-3">
+            <div class="row d-flex justify-content-around align-items-center pb-5 border-bottom border-primary broder-3" data-aos="fade-up">
               <div class="col-md-3">
                 <img class="radius-percent-50  wh-140" src="../assets/images/profile_snow.jpg">
               </div>
-              <div class="col-md-7"> 
+              <div class="col-md-7" > 
                 <span class="fs-5 name d-block fw-700 text-primary Author_Name">雪朱</span>
                 <p>
                   你好~我是雪朱，來自彰化和美，畢業於中興大學資工研究所。目前在彰化基督醫院資訊部服務，期待能在此發揮網頁專長和繼續做中學習網頁和專案開發知識！
@@ -32,20 +32,19 @@
               </div>
             </div>
   
-            <div class="row d-flex justify-content-around align-items-center py-5 border-bottom border-primary">
+            <div class="row d-flex justify-content-around align-items-center py-5 border-bottom border-primary" data-aos="fade-up">
               <div class="col-md-3">
-                <img class="radius-percent-50  wh-140" src="https://fakeimg.pl/275x275/">
+                <img class="radius-percent-50  wh-140" src="../assets/images/profile_AAAAA.jpg">
               </div>
               <div class="col-md-7"> 
-                <span class="fs-5 name d-inline-block mb-2">大名</span>
+                <span class="fs-5 name d-block fw-700 text-primary Author_Name">A5</span>
                 <p>
-                  自我介紹
-                  聯絡資訊
+                一張來自高雄的A5，努力在工程師的道路上前進著。感謝一路上給予我支持、鼓勵的小夥伴們，也感謝任何一個遇到的挫折和機會，過去的經歷不會消失，他們使人成長。
                 </p>
               </div>
             </div>
   
-            <div class="row d-flex justify-content-around pt-5 align-items-center">
+            <div class="row d-flex justify-content-around pt-5 align-items-center" data-aos="fade-up">
               <div class="col-md-3">
                 <img class="radius-percent-50 wh-140" src="../assets/images/profile_michael.png">
               </div>
@@ -67,7 +66,13 @@
     
 
     <%- include('./layout/footer'); -%>
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
