@@ -46,7 +46,7 @@
 
               <div class="col-xl-6 d-flex justify-content-center">
                 <!-- 正在敲鍵盤的貓貓區塊 -->
-                <div class="conversation text-center">
+                <div class="conversation text-center" data-aos="fade-left">
                   <a class="d-block w-100 hover-opacity-7" href="register.html">
                     <img class="wh-480" src="../assets/images/Desktop_kv.png" alt="正在敲鍵盤的貓貓圖片">
                   </a>
@@ -58,7 +58,13 @@
     
 
     <%- include('./layout/footer'); -%>
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

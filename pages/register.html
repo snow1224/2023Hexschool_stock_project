@@ -63,7 +63,7 @@
                 </form>
               </div>
           </div>
-          <div class="col-lg-6 d-flex justify-content-lg-center justify-content-end">
+          <div data-aos="fade-left" data-aos-offset="200" class="col-lg-6 d-flex justify-content-lg-center justify-content-end">
             <div class="welcome text-center d-flex justify-content-center">
                 <a class="d-block w-100 hover-opacity-7" href="register.html">
                   <img class="wh-480" src="../assets/images/Desktop_kv.png" alt="正在敲鍵盤的貓貓圖片">
@@ -75,7 +75,13 @@
     </div>
     
     <%- include('./layout/footer'); -%>
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
